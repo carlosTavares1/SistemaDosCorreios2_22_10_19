@@ -8,86 +8,90 @@
 </head>
 <body>
     <form name="frm" action="frete2.asp" method="post" ID="Form1">
-        <fieldset style="background: #EEEEEE;">
-            <legend>Calculo de Frete</legend>
-            <div>
-                <input type="text" name="codigo" value="" placeholder="Código" class=""/>
+        <div class="container-fluid">
+            <div class="row">
+                <fieldset style="background: #EEEEEE;">
+                    <legend>Calculo de Frete</legend>
+                    <div>
+                        <input type="text" name="codigo" value="" placeholder="Código" class="" />
+                    </div>
+                    <div>
+                        <input type="password" name="senha" value="" placeholder="Senha">
+                    </div>
+                    <div>
+                        <input type="text" name="servicos" value="" placeholder="Serviços">
+                    </div>
+                    <div>
+                        <input type="text" name="cepori" value="" placeholder="Cep Origem">
+                    </div>
+                    <div>
+                        <input type="text" name="cepdes" value="" placeholder="Cep Destino">
+                    </div>
+                    <div>
+                        <input type="text" name="peso" value="" placeholder="Peso">
+                    </div>
+                    <div>
+                        <span style="width:130px;">Formato:</span>
+                        <span>
+                            <select name="formato" size="1">
+                                <option value="1">Caixa/pacote</option>
+                                <option value="2">Rolo/prisma</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div>
+                        <input type="text" name="comprimento" value="" placeholder="Comprimento">
+                    </div>
+                    <div>
+                        <input type="text" name="altura" value="" placeholder="Altura">
+                    </div>
+                    <div>
+                        <input type="text" name="largura" value="" placeholder="Largura">
+                    </div>
+                    <div>
+                        <input type="text" name="diametro" value="" placeholder="Diâmetro">
+                    </div>
+                    <div>
+                        <span style="width:130px;">Mão própria:</span>
+                        <span>
+                            <select name="maopropria" size="1">
+                                14/16
+                                DEENC – Departamento de Encomendas
+                                Revisão 13/05/2019
+                                <option value="S">Sim</option>
+                                <option value="N">Não</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div>
+                        <span><input type="text" name="valordeclarado" value="" placeholder="Valor Declarado"></span>
+                    </div>
+                    <div>
+                        <span style="width:130px;">Aviso de Recebimento:</span>
+                        <span>
+                            <select name="avisorecebimento" size="1">
+                                <option value="S">Sim</option>
+                                <option value="N">Não</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            <input type="button" name="btn" value="Consultar"
+                                   ID="Submit1">
+                        </span>
+                    </div>
+                    <div id="campoDeRetorno">
+
+                    </div>
+                </fieldset>
             </div>
-            <div>
-                <input type="password" name="senha" value="" placeholder="Senha">
-            </div>
-            <div>
-                <input type="text" name="servicos" value="" placeholder="Serviços">
-            </div>
-            <div>
-                <span><input type="text" name="cepori" value="" placeholder="Cep Origem">
-            </div>
-            <div>
-                <input type="text" name="cepdes" value="" placeholder="Cep Destino">
-            </div>
-            <div>
-                <input type="text" name="peso" value="" placeholder="Peso">
-            </div>
-            <div>
-                <span style="width:130px;">Formato:</span>
-                <span>
-                    <select name="formato" size="1">
-                        <option value="1">Caixa/pacote</option>
-                        <option value="2">Rolo/prisma</option>
-                    </select>
-                </span>
-            </div>
-            <div>
-                <input type="text" name="comprimento" value="" placeholder="Código">
-            </div>
-            <div>
-                <span style="width:130px;">Altura:</span>
-                <span><input type="text" name="altura" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Largura:</span>
-                <span><input type="text" name="largura" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Diâmetro:</span>
-                <span><input type="text" name="diametro" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Mão própria:</span>
-                <span>
-                    <select name="maopropria" size="1">
-                        14/16
-                        DEENC – Departamento de Encomendas
-                        Revisão 13/05/2019
-                        <option value="S">Sim</option>
-                        <option value="N">Não</option>
-                    </select>
-                </span>
-            </div>
-            <div>
-                <span style="width:130px;">Valor declarado:</span>
-                <span><input type="text" name="valordeclarado" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Aviso de Recebimento:</span>
-                <span>
-                    <select name="avisorecebimento" size="1">
-                        <option value="S">Sim</option>
-                        <option value="N">Não</option>
-                    </select>
-                </span>
-            </div>
-            <div>
-                <span>
-                    <input type="SUBMIT" name="BTN" value="Consultar"
-                           ID="Submit1">
-                </span>
-            </div>
-        </fieldset>
+        </div>
     </form>
 
-            <script src="Scripts/bootstrap.js"></script>
-            <script src="Scripts/jquery-3.0.0.js"></script>
-            <script src="Scripts/inputmask/inputmask.js"></script>
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/inputmask/inputmask.js"></script>
+    <script src="Scripts/Utils/script.js"></script>
 </body>
 </html>
