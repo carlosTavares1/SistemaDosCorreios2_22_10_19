@@ -29,7 +29,16 @@
 
                 });
             });
+
+            /*
+   submit JSON as 'post' to a new page
+   Parameters:
+   path        (URL)   path to the new page
+   data        (obj)   object to be converted to JSON and passed
+   postName    (str)   name of the POST parameter to send the JSON
+*/
+
+
         })
 );
-
 
