@@ -24,10 +24,10 @@
         <input type="text" name="peso" value="" placeholder="Peso">
     </div>
     <div>
-        <input type="text" name="formato" value="" placeholder="Código" class="" />
+        <input type="text" name="formato" value="" placeholder="Formato" class="" />
     </div>
     <div>
-        <input type="text" name="comprimento" value="" placeholder="Código">
+        <input type="text" name="comprimento" value="" placeholder="Comprimento">
     </div>
     <div>
         <input type="text" name="altura" value="" placeholder="Altura">
@@ -39,13 +39,22 @@
         <input type="text" name="diametro" value="" placeholder="Diâmetro">
     </div>
     <div>
-        <input type="text" name="valordeclarado" value="" placeholder="Valor Declarado">
+        <input type="text" name="maopropria" value="" placeholder="Mão Própria">
+    </div>
     <div>
         <input type="text" name="valordeclarado" value="" placeholder="Valor Declarado">
     </div>
     <div>
-        <<input type="text" name="valordeclarado" value="" placeholder="Valor Declarado">
+        <input type="text" name="avisorecebimento" value="" placeholder="Aviso recebimento">
     </div>
-   
+
+    <script>
+        $(document).ready(
+            function documento() {
+                var valorUrl = window.location.search.substring(1).split("=")[1];
+                $('input[name="codigo"]').val(valorUrl);
+            }
+        );
+    </script>
 </body>
 </html>
