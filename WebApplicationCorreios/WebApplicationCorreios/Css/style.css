@@ -1,3 +1,8 @@
 ﻿body {
-    height:100vh;
+    height: 100vh;
+    background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(11).jpg');
+    background-size: cover;
+}
+#campo {
+    background-color: #100f0f38;
 }

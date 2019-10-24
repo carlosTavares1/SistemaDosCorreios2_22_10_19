@@ -5,90 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title></title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="Css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="Css/style.css" />
 </head>
 <body>
-    <form name="frm" action="frete2.asp" method="post" ID="Form1">
-        <div class="container-fluid">
-            <div class="row d-flex justify-content-center">
-                <fieldset style="background: #EEEEEE;">
-                    <legend>Calculo de Frete</legend>
-                    <div>
-                        <input type="text" name="codigo" value="" placeholder="Código" class="" />
-                    </div>
-                    <div>
-                        <input type="password" name="senha" value="" placeholder="Senha">
-                    </div>
-                    <div>
-                        <input type="text" name="servicos" value="" placeholder="Serviços">
-                    </div>
-                    <div>
-                        <input type="text" name="cepori" value="" placeholder="Cep Origem">
-                    </div>
-                    <div>
-                        <input type="text" name="cepdes" value="" placeholder="Cep Destino">
-                    </div>
-                    <div>
-                        <input type="text" name="peso" value="" placeholder="Peso">
-                    </div>
-                    <div>
-                        <span style="width:130px;">Formato:</span>
-                        <span>
-                            <select name="formato" size="1">
-                                <option value="1">Caixa/pacote</option>
-                                <option value="2">Rolo/prisma</option>
-                            </select>
-                        </span>
-                    </div>
-                    <div>
-                        <input type="text" name="comprimento" value="" placeholder="Comprimento">
-                    </div>
-                    <div>
-                        <input type="text" name="altura" value="" placeholder="Altura">
-                    </div>
-                    <div>
-                        <input type="text" name="largura" value="" placeholder="Largura">
-                    </div>
-                    <div>
-                        <input type="text" name="diametro" value="" placeholder="Diâmetro">
-                    </div>
-                    <div>
-                        <span style="width:130px;">Mão própria:</span>
-                        <span>
-                            <select name="maopropria" size="1">
-                                14/16
-                                DEENC – Departamento de Encomendas
-                                Revisão 13/05/2019
-                                <option value="S">Sim</option>
-                                <option value="N">Não</option>
-                            </select>
-                        </span>
-                    </div>
-                    <div>
-                        <span><input type="text" name="valordeclarado" value="" placeholder="Valor Declarado"></span>
-                    </div>
-                    <div>
-                        <span style="width:130px;">Aviso de Recebimento:</span>
-                        <span>
-                            <select name="avisorecebimento" size="1">
-                                <option value="S">Sim</option>
-                                <option value="N">Não</option>
-                            </select>
-                        </span>
-                    </div>
-                    <div>
-                        <span>
-                            <input type="button" name="btn" value="Consultar"
-                                   ID="Submit1">
-                        </span>
-                    </div>
-                    <div id="campoDeRetorno">
 
-                    </div>
-                </fieldset>
+    <div class="container-fluid h-100">
+        <div class="row d-flex justify-content-center align-content-center h-100">
+            <div class="col-md-4">
+                <form name="frm" action="frete2.asp" method="post" ID="Form1">
+                    <fieldset id="campo"/>
+                        <div>
+                            <input type="text" name="codigo" value="" placeholder="Código" class="form-control form-group" />
+                        </div>
+                        <div>
+                            <input type="password" name="senha" value="" placeholder="Senha" class="form-control form-group">
+                        </div>
+                        <div>
+                            <input type="text" name="servicos" value="" placeholder="Serviços" class="form-control form-group">
+                        </div>
+                        <div>
+                            <input type="text" name="cepori" value="" placeholder="Cep Origem" class="form-control form-group">
+                        </div>
+                        <div>
+                            <input type="text" name="cepdes" value="" placeholder="Cep Destino" class="form-control form-group">
+                        </div>
+                        <div>
+                            <input type="text" name="peso" value="" placeholder="Peso" class="form-control form-group">
+                        </div>
+                        <div>
+                                <select name="formato" size="1" class="form-control form-group">
+                                    <option value="1">Caixa/pacote</option>
+                                    <option value="2">Rolo/prisma</option>
+                                </select>
+                        </div>
+                        <div>
+                            <input type="text" name="comprimento" value="" placeholder="Comprimento" class="form-control form-group">
+                        </div>
+                        <div>
+                            <input type="text" name="altura" value="" placeholder="Altura" class="form-control form-group">
+                        </div>
+                        <div>
+                            <input type="text" name="largura" value="" placeholder="Largura" class="form-control form-group">
+                        </div>
+                        <div>
+                            <input type="text" name="diametro" value="" placeholder="Diâmetro" class="form-control form-group">
+                        </div>
+                        <div>
+                            <span>
+                                <select name="maopropria" size="1" class="form-control form-group">
+                                    14/16
+                                    DEENC – Departamento de Encomendas
+                                    Revisão 13/05/2019
+                                    <option value="S">Sim</option>
+                                    <option value="N">Não</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div>
+                            <input type="text" name="valordeclarado" value="" placeholder="Valor Declarado" class="form-control form-group">
+                        </div>
+                        <div>
+                                <select name="avisorecebimento" size="1" class="form-control form-group">
+                                    <option value="S">Sim</option>
+                                    <option value="N">Não</option>
+                                </select>
+                        </div>
+                        <div>
+                                <input type="button" name="btn" value="Consultar" class="btn btn-dark w-100">
+                        </div>
+                        <div id="campoDeRetorno">
+
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
-    </form>
+    </div>
+
 
     <script src="Scripts/jquery-3.0.0.js"></script>
     <script src="Scripts/bootstrap.js"></script>
