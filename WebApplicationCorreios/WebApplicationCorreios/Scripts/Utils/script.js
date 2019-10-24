@@ -58,6 +58,11 @@ $(document).ready(
 */
 
 
-        })
-);
-
+                }
+            })
+            .fail(function (jqXHR, textStatus, errorThrown) {
+                $('#modal-fracasso').modal('show')
+                $('#spinner').css("display", "none")
+            })
+    })
+})
