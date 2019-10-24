@@ -19,12 +19,12 @@
                     nVIDiametro: $('input[name="diametro"]').val(),
                 }
 
-                $.post("http://usysweb.com.br/api/correiosambev.php?nCdEmpresa=08082650&sDsSenha=564321&sCepOrigem=89045450&sCepDestino=04547000&nVlPeso=1&nCdFormato=1&nVlComprimento=20&nVlAltura=20&nVlLargura=20&sCdMaoPropria=n&nVlValorDeclarado=0&sCdAvisoRecebimento=n&nCdServico=04510&nVlDiametro=0&StrRetorno=xml&nIndicaCalculo=3", obj, function (data) {
+                $.post("http://usysweb.com.br/api/correiosambev.php?giomar=true", obj, function (data) {
                     var ObjetoCEP = JSON.stringify(obj);/*Convertendo o objeto para json*/
                     //window.location.replace("Consulta.html");
-                    // window.open("http://usysweb.com.br/api/correiosambev.php?nCdEmpresa=08082650&sDsSenha=564321&sCepOrigem=89045450&sCepDestino=04547000&nVlPeso=1&nCdFormato=1&nVlComprimento=20&nVlAltura=20&nVlLargura=20&sCdMaoPropria=n&nVlValorDeclarado=0&sCdAvisoRecebimento=n&nCdServico=04510&nVlDiametro=0&StrRetorno=xml&nIndicaCalculo=3" + '?json=' + serializedJson);
-                    window.location = "Consulta.html?obj=" + ObjetoCEP;
                     
+                    //window.location = "Consulta.html?obj=" + ObjetoCEP;
+                    alert(ObjetoCEP)
                     //$("input").append(ObjetoCEP);
 
                 });
