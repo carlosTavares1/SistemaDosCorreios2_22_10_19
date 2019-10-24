@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     $("#btn-enviar").click(function () {
         $('#spinner').css("display", "inherit")
+
         var obj = {
             nCdEmpresa: "",
             sDsSenha: "",
@@ -17,7 +18,8 @@
             nCdServico: $("#input-servico").val(),
             nVlDiametro: $("#input-diametro").val()
         };
-        $.post("http://usysweb.com.br/api/correiosambev.php?giomar=true", obj)
+
+        $.get("http://usysweb.com.br/api/correiosambev.php?", obj)
             .done(function (data) {
                 try {
                     $("#resultado-valor").text("R$ " + JSON.parse(data).cServico.Valor)
