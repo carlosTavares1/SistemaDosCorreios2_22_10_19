@@ -1,96 +1,87 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title></title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="Css/style.css" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <form name="frm" action="frete2.asp" method="post" ID="Form1">
-        <div class="container-fluid">
-            <div class="row d-flex justify-content-center">
-                <fieldset style="background: #EEEEEE;">
-                    <legend>Calculo de Frete</legend>
-                    <div>
-                        <input type="text" name="codigo" value="" placeholder="Código" class="" />
-                    </div>
-                    <div>
-                        <input type="password" name="senha" value="" placeholder="Senha">
-                    </div>
-                    <div>
-                        <input type="text" name="servicos" value="" placeholder="Serviços">
-                    </div>
-                    <div>
-                        <input type="text" name="cepori" value="" placeholder="Cep Origem">
-                    </div>
-                    <div>
-                        <input type="text" name="cepdes" value="" placeholder="Cep Destino">
-                    </div>
-                    <div>
-                        <input type="text" name="peso" value="" placeholder="Peso">
-                    </div>
-                    <div>
-                        <span style="width:130px;">Formato:</span>
-                        <span>
-                            <select name="formato" size="1">
-                                <option value="1">Caixa/pacote</option>
-                                <option value="2">Rolo/prisma</option>
-                            </select>
-                        </span>
-                    </div>
-                    <div>
-                        <input type="text" name="comprimento" value="" placeholder="Comprimento">
-                    </div>
-                    <div>
-                        <input type="text" name="altura" value="" placeholder="Altura">
-                    </div>
-                    <div>
-                        <input type="text" name="largura" value="" placeholder="Largura">
-                    </div>
-                    <div>
-                        <input type="text" name="diametro" value="" placeholder="Diâmetro">
-                    </div>
-                    <div>
-                        <span style="width:130px;">Mão própria:</span>
-                        <span>
-                            <select name="maopropria" size="1">
-                                14/16
-                                DEENC – Departamento de Encomendas
-                                Revisão 13/05/2019
-                                <option value="S">Sim</option>
-                                <option value="N">Não</option>
-                            </select>
-                        </span>
-                    </div>
-                    <div>
-                        <span><input type="text" name="valordeclarado" value="" placeholder="Valor Declarado"></span>
-                    </div>
-                    <div>
-                        <span style="width:130px;">Aviso de Recebimento:</span>
-                        <span>
-                            <select name="avisorecebimento" size="1">
-                                <option value="S">Sim</option>
-                                <option value="N">Não</option>
-                            </select>
-                        </span>
-                    </div>
-                    <div>
-                        <span>
-                            <input type="button" name="btn" value="Consultar"
-                                   ID="Submit1">
-                        </span>
-                    </div>
-                    <div id="campoDeRetorno">
+    <!-- Temos nosso conteudo ocupando todo o espa�o da viewport -->
+    <div class="container-fluid h-100">
+        <!-- Aqui temos nossa primeira linha do site -->
+        <div class="row d-flex align-content-center justify-content-center h-100">
+            <!-- Aqui crio o separador "div" e sinalizo que o mesmo ir� -->
+            <!-- Usar apenas 3/12 de nossa area total disponivel -->
+            <div class="col-md-3">
+                <form name="formenviar" method="get" send-post="correiosambev">
 
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Nome:</span>
+                            </div>
+                            <input type="text" class="form-control" name="Nome" placeholder="Informe o nome" />
+                        </div>
                     </div>
-                </fieldset>
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Altura:</span>
+                            </div>
+                            <input type="text" class="form-control" name="Altura" placeholder="Informe a Altura" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Peso:</span>
+                            </div>
+                            <input type="text" class="form-control" name="nVlPeso" placeholder="Informe peso" />
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <div class="row">
+                        <input type="button" class="w-100 btn btn-success form-group" name="bntconsultar" value="Consultar" data-toggle="modal" data-target="#exampleModal" />
+                    </div>
+                </form>
             </div>
         </div>
-    </form>
-
-    <!--CUSTOM JS-->
-    <script src="./js/input-validation.js" type="text/javascript"></script>
-    <script src="./js/scripts.js" type="text/javascript"></script>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resultado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p name="Valor"></p>
+                    <p name="PrazoEntrega"></p>
+                    <p name="ValorSemAdicionais"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/popper.js"></script>
+    <script src="Scripts/Utils/script.js"></script>
 </body>
 </html>

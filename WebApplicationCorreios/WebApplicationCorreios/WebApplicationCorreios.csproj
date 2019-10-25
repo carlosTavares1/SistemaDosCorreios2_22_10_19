@@ -134,7 +134,6 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Scripts\Utils\input-invalidation.js" />
-    <Content Include="Scripts\Utils\script-get.js" />
     <Content Include="Scripts\Utils\script.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
